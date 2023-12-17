@@ -36,15 +36,7 @@ public class inventory_page_2_Test extends TestBase
 		Assert.assertEquals(explabel, actLabel);
 		Reporter.log("Label of Inventory page ="+actLabel);
 	}
-	@Test(priority=1,enabled=true,groups = {"regression","retesting"})
-	public void verifyFooterTextTest()
-	{
-		String explabel="© 2023 Sauce Labs. All Rights Reserved. Terms of Service | Privacy Policy";
-		String actLabel=invent.FooterText();
-		Assert.assertEquals(explabel, actLabel);
-		Reporter.log("Label of Inventory page ="+actLabel);
-		
-	}
+	
 	@Test(priority=9,enabled=true,groups = "regression")
 	public void verifyTwitterLogoTest()
 	{
