@@ -61,12 +61,7 @@ public class inventory_page_2 extends TestBase
 		return AppLogo.getText();
 		
 	}
-	public String FooterText()
-	{
-		
-		return FooterText.getText();
-		
-	}
+
 
 	
 	public boolean verifyTwitterLogo()  //here we hav to check logo is displayed or not nd displayed method return true or false i.e we add boolean
