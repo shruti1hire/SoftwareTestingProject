@@ -33,7 +33,7 @@ public class cartPage extends TestBase
 		
 		public cartPage()
 		{
-			PageFactory.initElements(driver, this);  // to call each n every element so this point to current element
+			PageFactory.initElements(driver, this);  
 			
 		}
 		
