@@ -27,7 +27,7 @@ public class cartPageTest  extends TestBase
 	public void setup() throws InterruptedException, IOException
 	{
 		initialization();
-		login= new LoginPage();   //nd here we declare that global variable
+		login= new LoginPage();   
 		invent= new inventory_page_2();
 		cart=new cartPage();
 		login.loginToApplication();
@@ -40,7 +40,7 @@ public class cartPageTest  extends TestBase
 	@Test
 	public void verifyYourCartLabelTest() throws EncryptedDocumentException, IOException 
 	{
-		String explabel=ReadData.readExcel(0,9); // your cart label
+		String explabel=ReadData.readExcel(0,9); 
 		String actLabel=cart.verifyYourCartLabel();
 		Assert.assertEquals(explabel, actLabel);
 		Reporter.log("Label Your Cart  ="+actLabel);
@@ -48,7 +48,7 @@ public class cartPageTest  extends TestBase
 	@Test
 	public void verifyCartQTYLabelTest() throws EncryptedDocumentException, IOException 
 	{
-		String explabel=ReadData.readExcel(0,10); // QTY label //(0,10) we make it wrong for file
+		String explabel=ReadData.readExcel(0,10); 
 		String actLabel=cart.verifyCartQTYLabel();
 		Assert.assertEquals(explabel, actLabel);
 		Reporter.log(" Label of QTY  ="+actLabel);
@@ -56,7 +56,7 @@ public class cartPageTest  extends TestBase
 	@Test
 	public void verifyCartDescriptionLabelTest() throws EncryptedDocumentException, IOException 
 	{
-		String explabel=ReadData.readExcel(0,11); // Description label
+		String explabel=ReadData.readExcel(0,11); 
 		String actLabel=cart.verifyCartDescriptionLabel();
 		Assert.assertEquals(explabel, actLabel);
 		Reporter.log("Label of Cart Description  ="+actLabel);
@@ -64,7 +64,7 @@ public class cartPageTest  extends TestBase
 	@Test
 	public void verifycontinueshoppingBtnTest() throws EncryptedDocumentException, IOException 
 	{
-		String expURL=ReadData.readExcel(1, 0);  //url =https://www.saucedemo.com/inventory.html
+		String expURL=ReadData.readExcel(1, 0);  
 		String actURL=cart.verifycontinueshoppingBtn();
 		Assert.assertEquals(expURL, actURL);
 		Reporter.log("After Clicking On the Continue Shopping Button = "+actURL);
@@ -72,7 +72,7 @@ public class cartPageTest  extends TestBase
 	@Test
 	public void verifycheckoutBtnTest() throws EncryptedDocumentException, IOException 
 	{
-		String expURL=ReadData.readExcel(1, 1);  //url =https://www.saucedemo.com/checkout-step-one.html
+		String expURL=ReadData.readExcel(1, 1);  
 		String actURL=cart.verifycheckoutBtn();
 		Assert.assertEquals(expURL, actURL);
 		Reporter.log("After Clicking On the Checkout Button = "+actURL);
@@ -82,13 +82,13 @@ public class cartPageTest  extends TestBase
 	public void verifyapplogoTest()
 	{
 		boolean result=cart.verifyapplogo();
-		Assert.assertEquals(result, true); //this true compare with this
+		Assert.assertEquals(result, true); 
 		Reporter.log("Visibility of app Logo ="+result);
 	}
 	@Test
 	public void LoginToYourCartTest() throws EncryptedDocumentException, IOException
 	{
-		String expURL=ReadData.readExcel(0, 8) ;  // for url of cart  Your Cart
+		String expURL=ReadData.readExcel(0, 8) ;  
 		String actURL=cart.LoginToYourCart();
 		Assert.assertEquals(expURL, actURL);
 	}
