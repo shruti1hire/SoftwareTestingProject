@@ -26,7 +26,7 @@ public class CheckOutpage1 extends TestBase
 	{
 		return titleofCheckOutpage.getText();
 	}
-	public String Inputinformation() //all this are comes under the one functionality so w8 all in one function
+	public String Inputinformation() 
 	{
 		firstnameTextBox.sendKeys("shrutika");
 		lastnameTextBox.sendKeys("Hire");
