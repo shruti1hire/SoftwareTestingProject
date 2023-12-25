@@ -46,7 +46,7 @@ public class inventory_page_2 extends TestBase
 	//constructor
 	public inventory_page_2()
 	{
-		PageFactory.initElements(driver, this);  // to call each n every element so this point to current element
+		PageFactory.initElements(driver, this);  
 		
 	}
 	public String verifyProductsLabel()
@@ -64,9 +64,9 @@ public class inventory_page_2 extends TestBase
 
 
 	
-	public boolean verifyTwitterLogo()  //here we hav to check logo is displayed or not nd displayed method return true or false i.e we add boolean
+	public boolean verifyTwitterLogo()  
 	{
-		return TwitterLogo.isDisplayed(); //true compare to test code true
+		return TwitterLogo.isDisplayed(); 
 		
 	}
 	public boolean verifyFacebookLogo()  
@@ -93,7 +93,7 @@ public class inventory_page_2 extends TestBase
 	}
 	public String remove2products() throws InterruptedException
 	{
-		add6products(); //bz we want 1sr add this product then remove
+		add6products(); 
 		Thread.sleep(3000);
 		removebackpackProduct.click();
 		removebikelightProduct.click();
