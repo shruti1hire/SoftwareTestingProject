@@ -31,7 +31,7 @@ public class CheckOutpage2_Test extends TestBase
 	public void setup() throws InterruptedException, IOException
 	{
 		initialization();
-		login= new LoginPage();   //nd here we declare that global variable
+		login= new LoginPage();   
 		invent= new inventory_page_2();
 		cart=new cartPage();
 		check1=new CheckOutpage1();
@@ -96,28 +96,28 @@ public class CheckOutpage2_Test extends TestBase
 	public void verifyshippingInfoTxtTest()
 	{
 		boolean result=check2.verifyshippingInfoTxt();
-		Assert.assertEquals(result, true); //this true compare with this
+		Assert.assertEquals(result, true); 
 		Reporter.log("verify shipping info text ="+result);
 	}
 	@Test(priority=2,enabled=true)
 	public void verifypaymentInfoTxtTest()
 	{
 		boolean result=check2.verifypaymentInfoTxt();
-		Assert.assertEquals(result, true); //this true compare with this
+		Assert.assertEquals(result, true); 
 		Reporter.log("verify payment info text ="+result);
 	}
 	@Test(priority=1,enabled=true)
 	public void verifypricetotalTxtTest()
 	{
 		boolean result=check2.verifypricetotalTxt();
-		Assert.assertEquals(result, true); //this true compare with this
+		Assert.assertEquals(result, true); 
 		Reporter.log("verify price total text ="+result);
 	}
 	@Test(priority=9,enabled=true)
 	public void verifytotallabelTest()
 	{
 		boolean result=check2.verifytotallabel();
-		Assert.assertEquals(result, true); //this true compare with this
+		Assert.assertEquals(result, true); 
 		Reporter.log("verify  total label ="+result);
 	}
 
