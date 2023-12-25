@@ -24,14 +24,14 @@ public class inventory_page_2_Test extends TestBase
 	public void setup() throws InterruptedException, IOException
 	{
 		initialization();
-		login= new LoginPage();   //nd here we declare that global variable
+		login= new LoginPage();   
 		invent= new inventory_page_2();
 		login.loginToApplication();
 	}
 	@Test(priority=0,enabled=true,groups = "sanity")
 	public void verifyProductsLabelTest() throws EncryptedDocumentException, IOException
 	{
-		String explabel=ReadData.readExcel(0, 3); //Products(0,3) //we make it fail for file
+		String explabel=ReadData.readExcel(0, 3); 
 		String actLabel=invent.verifyProductsLabel();
 		Assert.assertEquals(explabel, actLabel);
 		Reporter.log("Label of Inventory page ="+actLabel);
@@ -41,7 +41,7 @@ public class inventory_page_2_Test extends TestBase
 	public void verifyTwitterLogoTest()
 	{
 		boolean result=invent.verifyTwitterLogo();
-		Assert.assertEquals(result, true); //this true compare with this
+		Assert.assertEquals(result, true); 
 		Reporter.log("Visibility of Twitter Logo ="+result);
 	}
 	@Test(priority=8,enabled=true)
@@ -56,20 +56,20 @@ public class inventory_page_2_Test extends TestBase
 	public void verifyFacebookLogoTest()
 	{
 		boolean result=invent.verifyFacebookLogo();
-		Assert.assertEquals(result, true); //this true compare with this
+		Assert.assertEquals(result, true); 
 		Reporter.log("Visibility of Facebook Logo ="+result);
 	}
 	@Test(priority=6,enabled=true)
 	public void verifyLinkedInLogoTest()
 	{
 		boolean result=invent.verifyTwitterLogo();
-		Assert.assertEquals(result, true); //this true compare with this
+		Assert.assertEquals(result, true); 
 		Reporter.log("Visibility of LinkedIn Logo ="+result);
 	}
 	@Test(priority=5,enabled=true)
 	public void add6productsTest() throws EncryptedDocumentException, IOException
 	{
-		String expCount=ReadData.readExcel(0, 4); //6  (0,4)
+		String expCount=ReadData.readExcel(0, 4); 
 		String actCount=invent.add6products();
 		Assert.assertEquals(expCount, actCount);
 		Reporter.log("Total Products Added To Cart = "+actCount);
@@ -77,7 +77,7 @@ public class inventory_page_2_Test extends TestBase
 	@Test(priority=4,enabled=true)
 	public void remove2productsTest() throws InterruptedException, EncryptedDocumentException, IOException
 	{
-		String expCount=ReadData.readExcel(0, 5); //4 (0,5)
+		String expCount=ReadData.readExcel(0, 5); 
 		String actCount=invent.remove2products();
 		Assert.assertEquals(expCount, actCount);
 		Reporter.log("count of product after removing = "+actCount);
@@ -86,13 +86,13 @@ public class inventory_page_2_Test extends TestBase
 	public void verifyCartLogoTest()
 	{
 		boolean result=invent.verifyCartLogo();
-		Assert.assertEquals(result, true); //this true compare with this
+		Assert.assertEquals(result, true); 
 		Reporter.log("Visibility of cart Logo ="+result);
 	}
 	@Test(priority=2,enabled=true)
 	public void LoginToYourCartTest() throws EncryptedDocumentException, IOException
 	{
-		String expURL=ReadData.readExcel(0, 8) ;  // for url of cart  Your Cart
+		String expURL=ReadData.readExcel(0, 8) ;  
 		String actURL=invent.LoginToYourCart();
 		Assert.assertEquals(expURL, actURL);
 	}
