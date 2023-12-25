@@ -20,7 +20,7 @@ public class TestBase
 {
 	public ExtentReports report=ExtentReportManager.getReportInstance();
 	public ExtentTest logger;
-	public static WebDriver driver;   //globally declare bz we want it in all class
+	public static WebDriver driver;   
     public void initialization() throws InterruptedException, IOException
     {
     	String browser=ReadData.readPropertyFile("Browser");
