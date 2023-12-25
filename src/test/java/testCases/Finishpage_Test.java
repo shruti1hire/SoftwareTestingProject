@@ -32,7 +32,7 @@ public class Finishpage_Test extends TestBase
 	public void setup() throws InterruptedException, IOException
 	{
 		initialization();
-		login= new LoginPage();   //nd here we declare that global variable
+		login= new LoginPage();   
 		invent= new inventory_page_2();
 		cart=new cartPage();
 		check1=new CheckOutpage1();
