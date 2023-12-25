@@ -10,7 +10,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ReadData 
 {
-	public static String readPropertyFile(String value) throws IOException                    //static=we dnt want it to change after acessing in another code
+	public static String readPropertyFile(String value) throws IOException                   
 	{
 		Properties prop = new Properties();
 		FileInputStream file = new FileInputStream("C:\\Users\\USER\\eclipse-workspace\\Software_testing_framework\\TestData\\config.properties");
