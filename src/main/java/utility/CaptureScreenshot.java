@@ -12,7 +12,7 @@ import org.openqa.selenium.io.FileHandler;
 
 import base.TestBase;
 
-//it is predefined code
+
 
 public class CaptureScreenshot extends TestBase
 {
@@ -23,7 +23,7 @@ public class CaptureScreenshot extends TestBase
 	public static void Screenshot(String nameofMethod) throws IOException
 	{
 		File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		File dest =new File("C:\\Users\\USER\\eclipse-workspace\\Software_testing_framework\\Screenshot\\" +nameofMethod+"--" +getDate()+".jpeg"); //screenshot folder path nd last add \\ 
+		File dest =new File("C:\\Users\\USER\\eclipse-workspace\\Software_testing_framework\\Screenshot\\" +nameofMethod+"--" +getDate()+".jpeg");  
 		FileHandler.copy(source, dest);
 	}
 }
